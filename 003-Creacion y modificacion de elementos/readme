@@ -1,0 +1,22 @@
+Mediante Flask y Jinja queremos hacer webs dinámicas
+Una web dinámica es una web que cambia con los datos
+
+/////////ENVIO DE datos
+
+Desde Python, pasamos datos de esta forma:
+return render_Template("blog.html" ,datos=blog)
+Los datos son un parámetro que se pone despues de la plantilla HTML.
+
+////////RECOGIDA DE datos
+
+En HTML
+
+Tengo soporte para coger variables
+La sintaxis es  {{ datos['Lo que quieras recoger'] }}
+
+También tengo soporte para estructuras de recorrer 
+La sintaxis es:
+
+{% for elemento in conjunto %}
+    ... y aquí dentro puedes poner lo que quieras que se repita
+{% endfor %}

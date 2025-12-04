@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      header {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold; 
+        font-size: x-large;
+        padding: 20px;
+        background-color: grey;
+        text-align: center;
+      }
+      main {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        background-color:aqua;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>
+      Hoy es {{datos['fecha']['dia']}}
+      del mes {{datos['fecha']['mes']}}
+      de {{datos['fecha']['anio']}}
+      y son las 
+      {{ datos['fecha']['hora'] }}:
+      {{ datos['fecha']['minuto'] }}:
+      {{ datos['fecha']['segundo'] }}:
+      </p>
+    </header>
+    <main>
+      {% for articulo in datos['articulos'] %}      
+    	  <article>
+          <h3>{{ articulo['titulo'] }}</h3>
+          <time>{{ articulo['fecha'] }}</time>
+          <p>{{ articulo['texto'] }}</p>
+    	  </article>
+      {% endfor %}
+  </main>
+  </body>
+</html>
