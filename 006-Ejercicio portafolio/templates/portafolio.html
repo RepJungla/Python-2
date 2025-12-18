@@ -1,20 +1,42 @@
 <!doctype html>
 <html>
+
   <head>
     <title>El portafolio de Héctor Quirós Pérez</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="static/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <header>
-      <h1>El portafolio de Héctor Quirós Pérez</h1>
+    <div class="contenedor">
+      <header>
+          <div class="cabecera">
+          <img src="static/fotopropia.jpg" class="fotopropia">
+            <div class="texto">
+          <h1 class="ubuntu-regular">Hola, soy Héctor Quirós Pérez</h1>
+          <h2 class="ubuntu-regular">Soy administrador de sistemas y redes</h2>
+            </div>
+
+            <div class="logos">
+              <a href="https://github.com/RepJungla" target="_blank">
+                <img src="static/github.png" class= "logo" alt="logogithub"> 
+              </a>
+              <a href="https://es.linkedin.com/in/h%C3%A9ctor-quir%C3%B3s-p%C3%A9rez-a8a136398" target="_blank">
+                <img src="static/linkedin.webp" class= "logo" alt="logolinkedn">
+              </a>
+            </div>
+          </div>
+    </div>
     </header>
     <main>
       {% for pieza in datos %}
-        <article>
-          <h3>{{pieza.titulo}}</h3>
-          <time>{{pieza.fecha}}</time>
-          <p>{{pieza.descripcion}}</p>
+        <article class="pieza">
+          <h3 class="ubuntu-regular">{{pieza.titulo}}</h3>
+          <time class="ubuntu-light">{{pieza.fecha}}</time>
+          <p class="ubuntu-light">{{pieza.descripcion}}</p>
           <p>{{pieza.imagen}}</p>
         </article>
       {% endfor %}

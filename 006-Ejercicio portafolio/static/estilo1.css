@@ -1,0 +1,81 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  
+  /* Cuerpo */
+  body {
+    background-color: #0f172a; /* azul muy oscuro */
+    color: #e5e7eb;
+    line-height: 1.6;
+  }
+  
+  /* Cabecera */
+  header {
+    background-color: #020617;
+    padding: 2rem;
+    border-bottom: 1px solid #1e293b;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #38bdf8; /* azul técnico */
+  }
+  
+  /* Contenido principal */
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  /* Tarjetas de proyectos */
+  article {
+    background-color: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Título del proyecto */
+  article h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #f8fafc;
+  }
+  
+  /* Fecha */
+  article time {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Descripción */
+  article p {
+    margin-bottom: 0.6rem;
+    color: #cbd5f5;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #64748b;
+    font-size: 0.85rem;
+    border-top: 1px solid #1e293b;
+  }
+  

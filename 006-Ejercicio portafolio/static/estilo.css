@@ -1,81 +1,134 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+body {
+    background:
+    linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("fondo.jfif");
+
+  background-size: cover;
+  background-position: center;
+  }
+
+  .ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
   }
   
-  /* Cuerpo */
-  body {
-    background-color: #0f172a; /* azul muy oscuro */
-    color: #e5e7eb;
-    line-height: 1.6;
+  .ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
-  /* Cabecera */
-  header {
-    background-color: #020617;
-    padding: 2rem;
-    border-bottom: 1px solid #1e293b;
+  .ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   
-  header h1 {
-    font-size: 2rem;
+  .ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+.contenedor {
+    min-height: 100vh;      /*VERTICAL HEIGHT*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.texto h1 {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+.texto h2 {
+    margin-top: 0;
+  }
+
+h1,h2 {
+    color: white;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.2s ease;    /*HACE MAS GRANDE LA FOTO AL PASAR EL CURSOR POR ENCIMA*/
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+.fotopropia {
+    width: 150px;               /*Tamaño de la imagen*/
+    height: 150px;              /*Mismo valor para que sea circular*/
+    border-radius: 50%;         /*circulo perfecto*/
+    object-fit: cover;          /*recorta bien la imagen*/
+    border: 2px solid white
+}
+
+.cabecera {
+    display: flex;
+    flex-direction: column;     /*Uno debajo del otro*/
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #38bdf8; /* azul técnico */
-  }
-  
-  /* Contenido principal */
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  /* Tarjetas de proyectos */
-  article {
-    background-color: #020617;
-    border: 1px solid #1e293b;
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  article:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Título del proyecto */
-  article h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-    color: #f8fafc;
-  }
-  
-  /* Fecha */
-  article time {
-    display: block;
-    font-size: 0.85rem;
-    color: #94a3b8;
-    margin-bottom: 0.8rem;
-  }
-  
-  /* Descripción */
-  article p {
-    margin-bottom: 0.6rem;
-    color: #cbd5f5;
-  }
-  
-  /* Footer */
-  footer {
+    
+}
+
+.pieza {
+    background-color: rgba(255, 255, 255, 0.05); /* oscuro transparente */
+    color: #e5e7eb; /* gris claro */
+    border-radius: 12px;
+    padding: 15px;
+    width: 250px;
     text-align: center;
-    padding: 1.5rem;
-    color: #64748b;
-    font-size: 0.85rem;
-    border-top: 1px solid #1e293b;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+
+  .pieza h3 {
+    color: #f8fafc; /* casi blanco */
   }
   
+  .pieza p {
+    color: #cbd5f5; /* gris claro */
+  }
+  
+  .pieza .fecha {
+    color: #94a3b8; /* gris azulado */
+  }
+  
+
