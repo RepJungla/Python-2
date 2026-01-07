@@ -10,7 +10,7 @@ def inicio():														#I Ejecuto esta funcion
 	conexion.row_factory = sqlite3.Row 			                    # CONVIERTE EN DICCIONARIO
 	cursor = conexion.cursor()							            # Creo un cursor para pedirle cosas a la bd
 	cursor.execute("SELECT * FROM piezas")                          # Le digo lo que quiero         !!!!!!!!!!!!
-	piezas = cursor.fetchall()						            # Ejecuto la petición contra la base de datos
+	piezas = cursor.fetchall()						            	# Ejecuto la petición contra la base de datos
 	
 	lista = []														# Creo una lista vacía
  
@@ -22,6 +22,6 @@ def inicio():														#I Ejecuto esta funcion
 	
 	return render_template("portafolio.html",datos=lista)	        #I renderizo la web
 
-if __name__ == "__main__":								#I Si estoy en el archivo principal		
-	app.run(debug=True)										#I Pongo en marcha la web
+if __name__ == "__main__":											#I Si estoy en el archivo principal		
+	app.run(debug=True)												#I Pongo en marcha la web
   
