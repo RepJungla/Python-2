@@ -1,0 +1,42 @@
+Explica paso a paso cómo has hecho la base de datos en SQLite:
+
+1. Creación de la base de datos
+
+Para el blog personal he utilizado SQLite, ya que es una base de datos sencilla y se guarda en un único archivo.
+La base de datos se llama: blog.db
+SQLite crea automáticamente el archivo cuando se realiza la primera conexión desde Python.
+
+2. Creación de la tabla
+
+La base de datos contiene una sola tabla, llamada entradas, que almacena los artículos del blog.
+Campos de la tabla:
+id: identificador único
+titulo: título del post
+fecha: fecha de publicación
+autor: autor del artículo
+contenido: texto del artículo
+imagen: nombre o ruta de la imagen
+
+3. Código SQL utilizado
+CREATE TABLE IF NOT EXISTS entradas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT,
+    fecha TEXT,
+    autor TEXT,
+    contenido TEXT,
+    imagen TEXT
+);
+
+IF NOT EXISTS evita errores si la tabla ya existe.
+AUTOINCREMENT genera automáticamente el identificador.
+Se utilizan tipos de datos simples (TEXT e INTEGER) como se ha trabajado en clase.
+
+4. Inserción de datos de ejemplo
+INSERT INTO entradas (titulo, fecha, autor, contenido, imagen)
+VALUES (
+    'Mi primer post',
+    '2026-01-14',
+    'Héctor',
+    'Este es el contenido de mi primer artículo del blog.',
+    'imagen1.jpg'
+);

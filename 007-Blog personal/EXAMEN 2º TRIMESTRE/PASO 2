@@ -1,0 +1,67 @@
+Explica paso a paso cómo has hecho el script de Python con Flask y SQLite
+
+1. Importación de librerías
+
+from flask import Flask, render_template
+import sqlite3
+
+
+Flask se utiliza para crear la aplicación web.
+render_template permite usar HTML con datos dinámicos.
+sqlite3 permite conectarse a la base de datos.
+
+2. Creación de la aplicación Flask
+app = Flask(__name__)
+Se crea la instancia principal de la aplicación web.
+
+3. Ruta principal del blog
+@app.get("/")
+def inicio():
+Esta función se ejecuta cuando el usuario accede a la página principal del blog.
+
+4. Conexión con SQLite y consulta de datos
+conn = sqlite3.connect("blog.db")
+conn.row_factory = sqlite3.Row
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM entradas")
+datos = cursor.fetchall()
+Se conecta a la base de datos.
+row_factory permite acceder a los datos por nombre de columna.
+Se recuperan todos los artículos del blog.
+
+5. Conversión de datos para la plantilla
+lista = []
+for fila in datos:
+    lista.append(dict(fila))
+Se convierten los resultados en una lista de diccionarios para poder usarlos fácilmente en HTML.
+
+6. Envío de datos al HTML y cierre de conexión
+conn.close()
+return render_template("blog.html", entradas=lista)
+Se cierran los recursos y se envían los datos a la plantilla.
+
+7. Código completo app.py
+from flask import Flask, render_template
+import sqlite3
+
+app = Flask(__name__)
+
+@app.get("/")
+def inicio():
+    conn = sqlite3.connect("blog.db")
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM entradas")
+    datos = cursor.fetchall()
+
+    entradas = []
+    for fila in datos:
+        entradas.append(dict(fila))
+
+    conn.close()
+    return render_template("blog.html", entradas=entradas)
+
+if __name__ == "__main__":
+    app.run(debug=True)

@@ -1,0 +1,81 @@
+Explica paso a paso cómo has hecho el HTML y el CSS del blog
+1. Uso de templates
+El archivo HTML se encuentra dentro de la carpeta:
+templates/blog.html
+Se utiliza el sistema de plantillas de Flask para mostrar los datos dinámicamente.
+
+2. Estructura HTML del blog
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Blog Personal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Blog Personal</h1>
+    </header>
+
+    <main>
+        {% for entrada in entradas %}
+        <article>
+            <h2>{{ entrada.titulo }}</h2>
+            <p class="meta">
+                {{ entrada.fecha }} - {{ entrada.autor }}
+            </p>
+            <p>{{ entrada.contenido }}</p>
+            <img src="{{ entrada.imagen }}" alt="">
+        </article>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>Blog creado con Flask y SQLite</p>
+    </footer>
+
+</body>
+</html>
+Se usa un bucle for para recorrer las entradas.
+Los datos se insertan usando {{ }}.
+Se separa la estructura del contenido.
+
+3. Estilos CSS (static/estilos.css)
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+}
+
+El CSS mejora la presentación visual del blog y separa el diseño del contenido.
