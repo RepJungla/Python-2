@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum>
+    <datos_personales>
+        <nombre>Héctor</nombre>
+        <apellidos>Quirós Pérez</apellidos>
+        <email>hectorquirosperez@gmail.com</email>
+    </datos_personales>
+
+    <experiencia_profesional>
+
+        <experiencia>
+            <empresa>FCC</empresa>
+            <periodo>2024-25</periodo>
+            <responsabilidades>Recogida de cartón</responsabilidades>
+        </experiencia>
+
+        <experiencia>
+            <empresa>FCC</empresa>
+            <periodo>2024-25</periodo>
+            <responsabilidades>Recogida de cartón</responsabilidades>
+        </experiencia>
+
+    </experiencia_profesional>
+
+    <formacion_academica>
+
+        <formacion>
+            <centro>Riu Turia</centro>
+            <titulo>Bachillerato</titulo>
+            <periodo>2020-2023</periodo>
+        </formacion>
+
+        <formacion>
+            <centro>CEAC</centro>
+            <titulo>Grado Superior ASIR</titulo>
+            <periodo>2023-Actualmente</periodo>
+        </formacion>
+
+    </formacion_academica>
+</curriculum>
