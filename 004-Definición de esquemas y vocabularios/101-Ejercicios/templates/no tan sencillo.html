@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Currículum</title>
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <h1>
+            {{ contenido.datos_personales.nombre }}
+            {{ contenido.datos_personales.apellidos }}
+        </h1>
+        <p>{{ contenido.datos_personales.email }}</p>
+    </header>
+
+    <hr>
+
+    <!-- PERFIL PERSONAL -->
+    <section>
+        <h2>Perfil personal</h2>
+        {% for texto in contenido.perfil_personal %}
+            <p>{{ texto }}</p>
+        {% endfor %}
+    </section>
+
+    <hr>
+
+    <!-- IDIOMAS -->
+    <section>
+        <h2>Idiomas</h2>
+        <ul>
+            {% for item in contenido.idiomas %}
+                <li>{{ item.idioma }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- FORMACIÓN -->
+    <section>
+        <h2>Formación</h2>
+        <ul>
+            {% for estudio in contenido.formacion %}
+                <li>
+                    <strong>{{ estudio.nivel }}</strong><br>
+                    {{ estudio.centro }} ({{ estudio.periodo }})
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- EXPERIENCIA LABORAL -->
+    <section>
+        <h2>Experiencia laboral</h2>
+
+        {% for trabajo in contenido["experiencia laboral"] %}
+            <article>
+                <h3>{{ trabajo.PUESTO }}</h3>
+                <p>
+                    <strong>{{ trabajo.EMPRESA }}</strong><br>
+                    {{ trabajo.periodo }}
+                </p>
+
+                <ul>
+                    {% for funcion in trabajo.funciones %}
+                        <li>{{ funcion }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            <br>
+        {% endfor %}
+
+    </section>
+
+</body>
+</html>

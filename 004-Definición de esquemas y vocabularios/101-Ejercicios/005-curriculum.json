@@ -1,0 +1,71 @@
+{
+    "datos_personales":{
+        "nombre":"hector",
+        "apellidos":"quirós perez",
+        "email":"hectorquirosperez@gmail.com"
+    },
+    "perfil_personal":[
+        "Cursando Administración de redes y sistemas con objetivos enfocados en la Administración de redes. Nivel básico de Python, así como buen nivel de AD (Windows Server) / Ubuntu"
+    ],
+        "idiomas":[
+        {
+            "idioma":"Inglés:B2"
+        },
+        {   
+            "idioma":"Valenciano:C1"
+        }
+    ],
+        
+    "formacion":[
+        {
+            "centro":"IES RIU TURIA",
+            "periodo":"2018-2022",
+            "nivel":"ESO"
+        },
+        {
+            "centro":"IES RIU TURIA",
+            "periodo":"2022-2024",
+            "nivel":"Bachillerato"
+        },
+        {  
+            "centro":"CEAC Burjassot",
+            "periodo":"2024-actualmente",
+            "nivel":"Grado ASIR"
+        }
+    ],
+    "experiencia laboral":[
+        {   
+            "EMPRESA":"F.C.C Ajuntament de València",
+            "PUESTO": "Peón de recogida",
+            "periodo":"JUNIO-JULIO 2025",
+            "funciones": [
+                "Capacidad para realizar múltiples tareas en un entorno rápido.",
+                "Recogida y clasificación de residuos",
+                "Coordinación con equipos"
+            ]  
+        },
+        {   
+            "EMPRESA":"F.C.C Ajuntament de València",
+            "PUESTO": "Peón de recogida",
+            "periodo":"JUNIO-JULIO 2024",
+            "funciones": [
+                "Capacidad para realizar múltiples tareas en un entorno rápido",
+                "Conductor de vehículo voluminoso",
+                "Detección de incidencias"
+            ]                
+        },
+        {   
+            "EMPRESA":"Marina Beach Club (RECABA)",
+            "PUESTO": "Camarero",
+            "periodo":"2022 (JUNIO-SEPTIEMBRE)",
+            "funciones": [
+                "Rápida resolución de conflictos o percances.",
+                "Buena base de inglés y comunicación.",
+                "Atención al cliente",
+                "Gestión de pedidos"
+                
+            ]             
+        }
+
+    ]
+}
